@@ -82,34 +82,45 @@ class TodoList extends Component {
 
     handleChange = e => {
         this.setState({
-          content: e.target.value
+            content: e.target.value
         });
-      }
+    }
 
     render() {
         return (
             <div className="col-lg-8 col-sm-12 mb-lg-0 h-100 overflow-auto ">
-                <div>
-                    <div className="row">
-                        <h2 className="col-3 text-left mt-3 mb=2">Todos</h2>
-                        {/* <button type="button" className="close text-primary" aria-label="Close">
+                <div className="container">
+                    <div className="navbar-header">
+                        <h2 className="text-left mt-3 mb=2 w-20">Todos</h2>
+                    </div>
+                    <div className="navbar-collapse">
+                        <ul className="nav nav-pills justify-content-end w-30">
+                            <li className="nav-item">
+                                <a className="nav-link active" href="#">Active</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Link</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                {/*<div className="row mx-right">
+                         <button type="button" className="close text-primary" aria-label="Close">
                         <span aria-hidden="true">&radic;</span>
-                    </button> */}
+                    </button> 
                         <div className="col-3 custom-control custom-checkbox mx-right">
                             <input type="checkbox" className="custom-control-input" id="isFinishedOrPlaned" onChange={this.handleChange} value={this.state.isFinishedOrPlaned} />
                             <button type="button" class="btn btn-info">{this.state.isFinishedOrPlaned ? 'Finished' : 'Planed'}</button>
                             <label className="custom-control-label" htmlFor="isFinishedOrPlaned"></label>
                         </div>
-                    </div>
-                    <hr className="mb-2 bg-light" />
-                    <Todos todos={this.state.todos} finishedTodo={this.handleFinishTodo} deleteTodo={this.handleDeleteTodo} />
-                    {/* <footer class="footer">
+                    </div>*/}
+                <hr className="mb-2 bg-light" />
+                <Todos todos={this.state.todos} finishedTodo={this.handleFinishTodo} deleteTodo={this.handleDeleteTodo} />
+                {/* <footer class="footer">
                   <div class="container"> */}
-                    <AddTodo addTodo={this.handleAddTodo} />
-                    {/* </div>
+                <AddTodo addTodo={this.handleAddTodo} />
+                {/* </div>
                 </footer> */}
-
-                </div>
             </div>
         );
     }

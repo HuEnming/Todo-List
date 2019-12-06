@@ -13,6 +13,14 @@ const config = {
 
 firebase.initializeApp(config);
 
+// let UserRef = null;
+// firebase.auth().onAuthStateChanged(user => {
+//   if (user) {
+//     UserRef = user;
+//     console.log(this.state)
+//   }
+// })
+// export const user = UserRef;
 export const authProvider = new firebase.auth.GoogleAuthProvider();
 export const auth = firebase.auth();
 export const db = firebase.firestore();

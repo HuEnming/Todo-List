@@ -5,16 +5,17 @@ export const FirebaseContext = createContext();
 
 class FirebaseContextProvider extends Component {
     state = {
-        authProvider, auth, db, user: null
+        authProvider, auth, db
     }
 
-    componentDidMount() {
-        this.state.auth.onAuthStateChanged(user => {
-            if (user) {
-                this.setState({ user })
-            }
-        })
-    }
+    // componentDidMount() {
+    //     this.state.auth.onAuthStateChanged(user => {
+    //         if (user) {
+    //             this.setState({ user })
+    //             console.log(this.state)
+    //         }
+    //     })
+    // }
 
     render() {
         return (

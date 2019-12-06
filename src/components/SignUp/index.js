@@ -52,7 +52,7 @@ class SignUp extends Component {
                     <input type="password" className="form-control" id="confirmPassword" placeholder="Confirm password" required onChange={this.handleChange} />
                 </div>
                 <button className="btn btn-lg btn-primary my-3" type="submit">Sign up</button>
-                <div className="red-text center">
+                <div className="text-danger center">
                             {this.state.error ? <p>{this.state.error.message}</p> : null}
                         </div>
                 <p className="mt-4 mb-3 text-muted text-center">CS385 Team Project</p>

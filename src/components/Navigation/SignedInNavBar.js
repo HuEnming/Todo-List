@@ -1,5 +1,10 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
+
+SignedInNavBar.prototype = {
+    signOutUser: PropTypes.func,
+}
 
 function SignedInNavBar(props) {
     return (
@@ -30,13 +35,13 @@ function SignedInNavBar(props) {
                     </ul>
                 </div>
                 <svg width="38" height="38" className="mr-3">
-                    <circle cx="19" cy="19" r="16" stroke-width="0" fill="white" />
-                    <text fill="#000000" font-size="18" x="7" y="24">AA</text>
+                    <circle cx="19" cy="19" r="16" strokeWidth="0" fill="white" />
+                    <text fill="#000000" fontSize="18" x="7" y="24">AA</text>
                 </svg>
                 {/* <svg width="100" height="100">
-                    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="white" />
+                    <circle cx="50" cy="50" r="40" stroke="green" strokeWidth="4" fill="white" />
                     Sorry, your browser does not support inline SVG.
-   <text fill="#000000" font-size="18" font-family="Verdana"
+   <text fill="#000000" fontSize="18" font-family="Verdana"
                         x="15" y="60">ASHISH</text>
                 </svg>
                 <div class="rounded-circle bg-light text-center"><p>AAA</p></div> */}

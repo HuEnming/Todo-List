@@ -2,11 +2,10 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
-SignedInNavBar.prototype = {
-    signOutUser: PropTypes.func,
-}
-
 function SignedInNavBar(props) {
+    SignedInNavBar.propTypes = {
+        props: PropTypes.func.isRequired,
+    }
     return (
         <nav className="navbar navbar-expand-lg navbar-inverse navbar-dark bg-primary navbar-fixed-top">
             <div className="container">
@@ -26,6 +25,9 @@ function SignedInNavBar(props) {
                         <li className="nav-item active">
                             <Link to="/dashboard" className="nav-link">Todos<span className="sr-only"></span></Link>
                         </li>
+                        {/* <li className="nav-item active">
+                            <Link to="/profile-view" className="nav-link">Profile<span className="sr-only"></span></Link>
+                        </li> */}
                         {/* <li className="nav-item">
                                 <a className="nav-link" href="#">Sign in</a>
                             </li>
@@ -36,7 +38,7 @@ function SignedInNavBar(props) {
                 </div>
                 <svg width="38" height="38" className="mr-3">
                     <circle cx="19" cy="19" r="16" strokeWidth="0" fill="white" />
-                    <text fill="#000000" fontSize="18" x="7" y="24">AA</text>
+                    <text fill="#000000" fontSize="18" x="7" y="24"><Link to="/dashboard">Me</Link></text>
                 </svg>
                 {/* <svg width="100" height="100">
                     <circle cx="50" cy="50" r="40" stroke="green" strokeWidth="4" fill="white" />

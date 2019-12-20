@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {FirebaseContext} from '../../contexts/FirebaseContext'
 
-class Signin extends Component {
+class SignIn extends Component {
     static contextType = FirebaseContext
     state = {
         email: '',
@@ -62,4 +62,4 @@ class Signin extends Component {
     }
 }
 
-export default Signin;
+export default SignIn;

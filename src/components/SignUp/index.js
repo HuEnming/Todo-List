@@ -19,7 +19,7 @@ class SignUp extends Component {
     handleSubmit = e => {
         e.preventDefault();
         const { email, password, confirmPassword } = this.state
-        if (password == confirmPassword) {
+        if (password === confirmPassword) {
             this.context.auth
             .createUserWithEmailAndPassword(email, password)
             .then(() => {
@@ -40,15 +40,15 @@ class SignUp extends Component {
                 <h1 className="display-6 my-4 mx-left text-primary ">Sign up</h1>
                 <hr className="my-4 bg-light" />
                 <div className="form-group">
-                    <label for="email">Email address</label>
+                    <label htmlFor="email">Email address</label>
                     <input type="email" className="form-control" id="email" placeholder="Email address" required onChange={this.handleChange} />
                 </div>
                 <div className="form-group">
-                    <label for="password">Password</label>
+                    <label htmlFor="password">Password</label>
                     <input type="password" className="form-control" id="password" placeholder="Password" required onChange={this.handleChange} />
                 </div>
                 <div className="form-group">
-                    <label for="confirmPassword">Confirm password</label>
+                    <label htmlFor="confirmPassword">Confirm password</label>
                     <input type="password" className="form-control" id="confirmPassword" placeholder="Confirm password" required onChange={this.handleChange} />
                 </div>
                 <button className="btn btn-lg btn-primary my-3" type="submit">Sign up</button>

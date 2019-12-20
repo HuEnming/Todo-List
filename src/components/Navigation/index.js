@@ -10,6 +10,8 @@ class Navigation extends Component {
         error: null
     }
 
+    //static getDerivedStateFromProps
+    
     componentDidMount() {
         this.context.auth.onAuthStateChanged(user => {
             if (user) {

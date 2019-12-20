@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navigation from './components/Navigation';
 import Home from './components/Home';
-import Signin from './components/SignIn'
+import SignIn from './components/SignIn'
 import Dashboard from './components/Dashboard'
 import SignUp from './components/SignUp'
+import ProfileEdit from './components/ProfileEdit'
+import ProfileView from './components/ProfileView'
 
 class App extends Component {
   state = {}
@@ -18,8 +20,10 @@ class App extends Component {
             <Route exact path='/' component={Home} />
             <Route path='/home' component={Home} />
             <Route path='/dashboard' component={Dashboard} />
-            <Route path='/signin' component={Signin} />
+            <Route path='/signin' component={SignIn} />
             <Route path='/signup' component={SignUp} />
+            <Route path='/profile-view' component={ProfileView} />
+            <Route path='/profile-edit' component={ProfileEdit} />
           </Switch>
         </Router>
       </div>

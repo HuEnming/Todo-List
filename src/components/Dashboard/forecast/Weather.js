@@ -4,8 +4,6 @@ import { findDOMNode } from 'react-dom';
 import logo from './fanart.jpg';
 import { FirebaseContext } from '../../../contexts/FirebaseContext';
 
-//codes and commented by Kocheng
-
 class Weather extends Component {
 	static contextType = FirebaseContext;
 	constructor(props) {
